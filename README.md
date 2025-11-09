@@ -25,7 +25,7 @@ Es importante crear el objeto ViewModel de forma correcta para que su ciclo de v
 <pre>
 val viewModel: CounterViewModel = viewModel(
     factory = object : ViewModelProvider.Factory {
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        override fun &lt;T : ViewModel&gt; create(modelClass: Class&lt;T&gt;): T {
             return CounterViewModel() as T
         }
     }
@@ -51,7 +51,7 @@ pasándole el constructor con el parámetro del contexto.
 val context = LocalContext.current
 val viewModel: FileViewModel = viewModel(
     factory = object : ViewModelProvider.Factory {
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        override fun &lt;T : ViewModel&gt; create(modelClass: Class&lt;T&gt;): T {
             return FileViewModel(context) as T
         }
     }
